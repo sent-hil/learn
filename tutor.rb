@@ -1,13 +1,18 @@
+require 'pry'
+
+$local = {}
+
 set_trace_func proc { |event, file, line, id, bind, classname|
-  locals = bind.eval('local_variables').count
-  #puts locals
+  bind.eval('local_variables').each do |l|
+    $local[l] - bind.eval(l)
+  end
 
   printf "%8s %s:%-2d %10s %8s %12s\n", event, file, line, id, classname, locals
 }
 
 one = 'hello'
 two = 'hola'
-three = two
+#three = two
 
 #class Test
   #def test
@@ -20,3 +25,5 @@ three = two
 
 #t = Test.new
 #t.test
+
+set_trace_func nil
