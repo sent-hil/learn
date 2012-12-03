@@ -1,0 +1,42 @@
+# BDD analytics library
+
+GOAL:
+Part 1 - collect the data
+
+How:
+Monkeypatch rSpec!
+  There are two places I want to hook into to get the data.
+    1. High level formatter object
+    2. Low level matcher that does the actual comparison
+
+Store hooks and create data structure
+  * How to store data collected from two different places,
+    without using a global variables?
+
+{
+  "time"            => "2012-11-29 15:45:58 -0500",
+  "code"            => "class Post\n end",
+  "spec_code        => "it do\n Post.new.should_not be_a(Post) end"
+  "type_of_failure" => "BeAKindOf"
+  "backtrace",      => ":exception=>
+  #<RSpec::Expectations::ExpectationNotMetError: expected
+#<Post:0x007fe650836858> not to be a kind of Post>"
+  "matcher"         => "Post"
+  "actual"          => "#<Post:0x007fe650836858>"
+}
+
+Part 2 - analyze the data
+
+See what type of errors you get often:
+  Negative
+  expected #<Post:0x00720f0> not to be a kind of Post
+
+  Positive:
+  expected: "1" got: "2" (using ==)
+
+Correlate that to when/how you get it:
+  Time: time of the day
+  Methods:
+    Type of code - too big/complex?
+    Which ones fails often
+    Which previously passing specs fails now
