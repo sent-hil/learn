@@ -1,9 +1,19 @@
 package main
 
-func main () {
-	if 1 {
-		b := 1
+import (
+	"fmt"
+)
+
+func main() {
+	var b bool
+
+	if true {
+		b = true
+	} else if false {
+		b = false
+	} else {
+		b = false
 	}
-	else {
-	}
+
+	fmt.Println(b)
 }
