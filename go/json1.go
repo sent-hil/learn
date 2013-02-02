@@ -7,14 +7,14 @@ import (
 )
 
 const blob = `[
-{"Title":"Indiana", "URL":"http", "Something":"something"},
-{"Title":"Jones"}
+  {"Title":"Indiana", "URL":"http", "Something":"something"},
+  {"Title":"Jones"}
 ]`
 
 type Item struct {
-	Title string
-	URL   string
-  Something string
+	Title     string
+	URL       string
+	Something string
 }
 
 func main() {
