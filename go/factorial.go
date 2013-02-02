@@ -2,27 +2,25 @@ package main
 
 import "fmt"
 
-func iter(n int) int {
-	var result int
-
+func iter(n int) (result int) {
 	if n == 0 {
 		result = 1
 	} else {
 		result = n * iter(n-1)
 	}
 
-	return result
+	return
 }
 
 func iter_fact(n int) int {
 	if n == 0 {
 		return 1
 	}
+
 	return n * iter_fact(n-1)
 }
 
-func iter_hashed(n int, hash map[int]int) int {
-	var result int
+func iter_hashed(n int, hash map[int]int) (result int) {
 	value, exists := hash[n]
 
 	if exists == false {
@@ -31,7 +29,7 @@ func iter_hashed(n int, hash map[int]int) int {
 		result = value
 	}
 
-	return result
+	return
 }
 
 func main() {

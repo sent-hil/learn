@@ -5,8 +5,9 @@ import (
 	"reflect"
 )
 
-func main () {
+func main() {
 	var x float64 = 5
 	v := reflect.ValueOf(x)
-	fmt.Println("type:", v.Kind() == reflect.Float64)
+	fmt.Println("val:", x)
+	fmt.Println("float?:", v.Kind() == reflect.Float64)
 }
