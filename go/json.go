@@ -3,10 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"unicode/utf8"
 )
 
 func main() {
-	slcD := []string{"apple", "peach", "pear"}
-	slcB, _ := json.Marshal(slcD)
-	fmt.Println(string(slcB))
+	strings := []interface{}{"apple", "peach", "pear", 0xffff}
+	jsons, _ := json.Marshal(strings)
+	fmt.Println(jsons)
+
+	fmt.Println(utf8.ValidString(0xU00110000))
 }
