@@ -21,4 +21,8 @@ func main() {
 
 	home, _ := time.LoadLocation("Australia/Sydney")
 	fmt.Println(t.In(home))
+
+	time.AfterFunc(5*time.Minute, func() {
+		fmt.Printf("expired")
+	})
 }
