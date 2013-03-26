@@ -1,3 +1,3 @@
 # Go
 
-[Time](go/time.go)
+[Ticker](go/ticker.go) Similar to setInterval, do something every x internal.
