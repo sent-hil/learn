@@ -9,12 +9,12 @@ type Point struct {
 
 type intt int
 
-//define method on intt similar to:
-//class intt
-//  def negative
-//    ...
-//  end
-//end
+// define method on intt similar to:
+// class intt
+//   def negative
+//     ...
+//   end
+// end
 func (self intt) negative() bool {
 	var result bool = false
 
@@ -30,6 +30,11 @@ func (self intt) negative() bool {
 // def self.__init__(self)
 // func (receiver) name return_type { body }
 func (p *Point) Abs() float64 {
+	return math.Sqrt(p.X*p.X + p.Y*p.Y)
+}
+
+// interface only applies to methods defined
+func (p *Point) NotAbs() float64 {
 	return math.Sqrt(p.X*p.X + p.Y*p.Y)
 }
 
