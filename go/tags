@@ -1,0 +1,163 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Abs	interface.go	/^func (p *Point) Abs() float64 {$/;"	f
+Abs	methods.go	/^func (p *Point) Abs() float64 {$/;"	f
+Callback	functions.go	/^	var my_func Callback$/;"	f
+Callback	functions.go	/^type Callback func()$/;"	t
+Current	mux.go	/^var Current Status$/;"	v
+HelloFunc	mux.go	/^type HelloFunc func(a int)$/;"	t
+Hi	mux.go	/^func (h HelloFunc) Hi() bool {$/;"	f
+Item	json1.go	/^type Item struct {$/;"	t
+LinkedList	linked_list.go	/^type LinkedList struct {$/;"	t
+Magnitude	interface.go	/^type Magnitude interface {$/;"	t
+Match	mux.go	/^func (m MatcherFunc) Match(r *http.Request, match *mux.RouteMatch) bool {$/;"	f
+MatcherFunc	mux.go	/^type MatcherFunc func(*http.Request, *mux.RouteMatch) bool$/;"	t
+My	struct_tags.go	/^type My struct {$/;"	t
+Op	types.go	/^type Op func(int, int) int$/;"	t
+Person	go_example.com/structs.go	/^type Person struct {$/;"	t
+Point	interface.go	/^type Point struct {$/;"	t
+Point	methods.go	/^type Point struct {$/;"	t
+RPC	types.go	/^type RPC struct {$/;"	t
+Scale	methods.go	/^func (p *Point) Scale(s float64) {$/;"	f
+StateFunc	functions1.go	/^type StateFunc func(int) StateFunc$/;"	t
+Status	mux.go	/^type Status struct {$/;"	t
+TZ	iota.go	/^type TZ int$/;"	t
+TZ	types.go	/^type TZ int$/;"	t
+Worker	mux.go	/^type Worker struct {$/;"	t
+add	types.go	/^func add(a, b int) int {$/;"	f
+area	go_example.com/interfaces.go	/^func (c circle) area() float64 {$/;"	f
+area	go_example.com/interfaces.go	/^func (s square) area() float64 {$/;"	f
+area	go_example.com/methods.go	/^func (r *rect) area() int {$/;"	f
+array	go_example.com/slices.go	/^	var array [5]int$/;"	v
+cast	type_conversion.go	/^	\/\/return value of type cast, bool status of type cast$/;"	t
+circle	go_example.com/interfaces.go	/^type circle struct {$/;"	t
+customMatcher	mux.go	/^\/\/func customMatcher() func(*http.Request, *mux.RouteMatch) bool {$/;"	f
+debug	debug.go	/^func debug(s ...interface{}) {$/;"	f
+def	fibonacci.go	/^	\/\/returns name of variable in func def, i.e. result$/;"	f
+defined	types.go	/^	\/\/define hash where strings map to TZ, type defined above$/;"	t
+delay	flag.go	/^var delay = flag.Duration("delay", 1*time.Second, "how long to wait")$/;"	v
+err	errors.go	/^	var err error$/;"	v
+f	go_example.com/goroutines.go	/^func f(from string) {$/;"	f
+f1	go_example.com/errors.go	/^func f1(arg int) (int, error) {$/;"	f
+fib	fibonacci.go	/^func fib(num int) (result int) {$/;"	f
+foo	type_conversion.go	/^	var foo interface{}$/;"	v
+geometry	go_example.com/interfaces.go	/^type geometry interface {$/;"	t
+greater_than_ten	errors.go	/^func greater_than_ten(value int) (bool, error) {$/;"	f
+hash	factorial.go	/^	var hash = make(map[int]int)$/;"	v
+hello	functions1.go	/^func hello(sf StateFunc) {$/;"	f
+hello_there	functions1.go	/^func hello_there() string {$/;"	f
+home	t.go	/^func home(a int) func(http.ResponseWriter, *http.Request) {$/;"	f
+homeHandler	http.go	/^func homeHandler(resp http.ResponseWriter, req *http.Request) {$/;"	f
+homeHandler	mux.go	/^func homeHandler(resp http.ResponseWriter, req *http.Request) {$/;"	f
+input	go_example.com/goroutines.go	/^	var input string$/;"	v
+intSeq	go_example.com/closures.go	/^func intSeq() func() int {$/;"	f
+integer1	interface.go	/^	var integer1 intt = 0$/;"	v
+integer2	interface.go	/^	var integer2 intt = -1$/;"	v
+intt	interface.go	/^type intt int$/;"	t
+items	json1.go	/^	var items []*Item$/;"	v
+iter	factorial.go	/^func iter(n int) (result int) {$/;"	f
+iter_fact	factorial.go	/^func iter_fact(n int) int {$/;"	f
+iter_hashed	factorial.go	/^func iter_hashed(n int, hash map[int]int) (result int) {$/;"	f
+iter_through_list	linked_list.go	/^func iter_through_list(list LinkedList) {$/;"	f
+longCalculation	goroutines.go	/^func longCalculation(x int) int {$/;"	f
+main	amqp.go	/^func main() {$/;"	f
+main	chan.go	/^func main () {$/;"	f
+main	chan1.go	/^func main() {$/;"	f
+main	chan2.go	/^func main() {$/;"	f
+main	debug.go	/^func main() {$/;"	f
+main	errors.go	/^func main() {$/;"	f
+main	factorial.go	/^func main() {$/;"	f
+main	fibonacci.go	/^func main() {$/;"	f
+main	flag.go	/^func main() {$/;"	f
+main	functions.go	/^func main() {$/;"	f
+main	functions1.go	/^func main() {$/;"	f
+main	go_example.com/arrays.go	/^func main() {$/;"	f
+main	go_example.com/channels.go	/^func main() {$/;"	f
+main	go_example.com/channels1.go	/^func main() {$/;"	f
+main	go_example.com/channels2.go	/^func main() {$/;"	f
+main	go_example.com/channels3.go	/^func main() {$/;"	f
+main	go_example.com/channels4.go	/^func main() {$/;"	f
+main	go_example.com/channels5.go	/^func main() {$/;"	f
+main	go_example.com/closures.go	/^func main() {$/;"	f
+main	go_example.com/constants.go	/^func main() {$/;"	f
+main	go_example.com/errors.go	/^func main() {$/;"	f
+main	go_example.com/for.go	/^func main() {$/;"	f
+main	go_example.com/functions.go	/^func main() {$/;"	f
+main	go_example.com/functions1.go	/^func main() {$/;"	f
+main	go_example.com/functions2.go	/^func main() {$/;"	f
+main	go_example.com/goroutines.go	/^func main() {$/;"	f
+main	go_example.com/hello_world.go	/^func main() {$/;"	f
+main	go_example.com/if_else.go	/^func main() {$/;"	f
+main	go_example.com/interfaces.go	/^func main() {$/;"	f
+main	go_example.com/maps.go	/^func main() {$/;"	f
+main	go_example.com/methods.go	/^func main() {$/;"	f
+main	go_example.com/pointers.go	/^func main() {$/;"	f
+main	go_example.com/range.go	/^func main() {$/;"	f
+main	go_example.com/rate_limit.go	/^func main() {$/;"	f
+main	go_example.com/select.go	/^func main() {$/;"	f
+main	go_example.com/slices.go	/^func main() {$/;"	f
+main	go_example.com/structs.go	/^func main() {$/;"	f
+main	go_example.com/switch.go	/^func main() {$/;"	f
+main	go_example.com/tickers.go	/^func main() {$/;"	f
+main	go_example.com/tickers1.go	/^func main() {$/;"	f
+main	go_example.com/timeouts.go	/^func main() {$/;"	f
+main	go_example.com/timers.go	/^func main() {$/;"	f
+main	go_example.com/values.go	/^func main() {$/;"	f
+main	go_example.com/variables.go	/^func main() {$/;"	f
+main	go_example.com/worker_pools.go	/^func main() {$/;"	f
+main	goroutines.go	/^func main() {$/;"	f
+main	gosched.go	/^func main() {$/;"	f
+main	http.go	/^func main() {$/;"	f
+main	if.go	/^func main() {$/;"	f
+main	interface.go	/^func main() {$/;"	f
+main	interface1.go	/^func main() {$/;"	f
+main	iota.go	/^func main() {$/;"	f
+main	json.go	/^func main() {$/;"	f
+main	json1.go	/^func main() {$/;"	f
+main	linked_list.go	/^func main() {$/;"	f
+main	methods.go	/^func main() {$/;"	f
+main	mux.go	/^func main() {$/;"	f
+main	net.go	/^func main() {$/;"	f
+main	os.go	/^func main() {$/;"	f
+main	os_command.go	/^func main() {$/;"	f
+main	reflect.go	/^func main() {$/;"	f
+main	str_to_int.go	/^func main() {$/;"	f
+main	struct_tags.go	/^func main() {$/;"	f
+main	t.go	/^func main() {$/;"	f
+main	time.go	/^func main() {$/;"	f
+main	type_conversion.go	/^func main() {$/;"	f
+main	types.go	/^func main() {$/;"	f
+measure	go_example.com/interfaces.go	/^func measure(g geometry) {$/;"	f
+message	flag.go	/^var message = flag.String("message", "Hello!", "what to say")$/;"	v
+mkCallback	functions.go	/^func mkCallback(i int) Callback {$/;"	f
+mm	go_example.com/maps.go	/^	var mm = map[string]int{"foo": 1, "bar": 2}$/;"	v
+my_func	functions.go	/^	var my_func Callback$/;"	v
+name	interface.go	/^\/\/ func (receiver) name return_type { body }$/;"	f
+name	interface.go	/^\/\/ func name return_type { body }$/;"	f
+negative	interface.go	/^func (self intt) negative() bool {$/;"	f
+perim	go_example.com/interfaces.go	/^func (c circle) perim() float64 {$/;"	f
+perim	go_example.com/interfaces.go	/^func (s square) perim() float64 {$/;"	f
+perim	go_example.com/methods.go	/^func (r rect) perim() int {$/;"	f
+ping	go_example.com/channels2.go	/^func ping(pings chan<- string, msg string) {$/;"	f
+plus	go_example.com/functions.go	/^func plus(a int, b int) int {$/;"	f
+pong	go_example.com/channels2.go	/^func pong(pings <-chan string, pongs chan<- string) {$/;"	f
+rect	go_example.com/methods.go	/^type rect struct {$/;"	t
+result	errors.go	/^	var result bool$/;"	v
+result	interface.go	/^	var result bool = false$/;"	v
+say	gosched.go	/^func say(s string) {$/;"	f
+square	go_example.com/interfaces.go	/^type square struct {$/;"	t
+str	functions1.go	/^type str struct {$/;"	t
+sum	go_example.com/functions2.go	/^func sum(nums ...int) {$/;"	f
+that	functions1.go	/^	\/\/create func that returns func which takes string$/;"	f
+that	functions1.go	/^\/\/accepts func that returns string$/;"	f
+twoD	go_example.com/arrays.go	/^	var twoD [2][3]int$/;"	v
+vals	go_example.com/functions1.go	/^func vals() (int, int) {$/;"	f
+which	types.go	/^\/\/ define type which is a function$/;"	t
+worker	go_example.com/channels1.go	/^func worker(done chan bool) {$/;"	f
+worker	go_example.com/worker_pools.go	/^func worker(id int, jobs <-chan int, results chan<- int) {$/;"	f
+zeroptr	go_example.com/pointers.go	/^func zeroptr(iptr *int) {$/;"	f
+zeroval	go_example.com/pointers.go	/^func zeroval(ival int) {$/;"	f
