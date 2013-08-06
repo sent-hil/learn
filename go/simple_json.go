@@ -1,17 +1,28 @@
 package main
 
 import (
-	"fmt"
 	simplejson "github.com/bitly/go-simplejson"
+	"log"
 )
 
 func main() {
-	data := []byte(`{"greeting":{"hello":"world"}}`)
-
-	js, err := simplejson.NewJson(data)
+	blob := `{"Title":"Crusade", "Actor":["Ford", "Sean"]}`
+	json, err := simplejson.NewJson([]byte(blob))
 	if err != nil {
-		fmt.Println("Got error", err)
+		log.Fatal(err)
 	}
-	fmt.Println(js.Get("greeting").Get("hello"))
-	fmt.Println(js.GetPath("greeting", "hello"))
+	title, _ := json.Get("Title").String()
+	log.Println(title)
+
+	actorsList, exists := json.CheckGet("Actor")
+	log.Println(actorsList, exists)
+
+	actors, err := actorsList.Array()
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, actor := range actors {
+		log.Printf("%s acted in %s", actor, title)
+	}
 }

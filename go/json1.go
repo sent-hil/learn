@@ -1,27 +1,19 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-	"strings"
+	"log"
 )
 
-const blob = `[
-  {"Title":"Indiana", "URL":"http", "Something":"something"},
-  {"Title":"Jones"}
-]`
-
-type Item struct {
-	Title     string
-	URL       string
-	Something string
+type Person struct {
+	name     string `json:"name"`
+	fullName map[string]map[string]string
 }
 
 func main() {
-	var items []*Item
-	json.NewDecoder(strings.NewReader(blob)).Decode(&items)
-
-	for _, item := range items {
-		fmt.Println(item.Title, item.URL, item.Something)
-	}
+	firstName := map[string]string{"first": "senthil"}
+	fullName := map[string]map[string]string{"first": firstName}
+	person := Person{"s", fullName}
+	person.fullName["first.first"] = map[string]string{"hello": "hola"}
+	log.Println(person.fullName["first.first"])
+	log.Println(person.fullName["first"])
 }
