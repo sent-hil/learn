@@ -15,5 +15,9 @@ func main() {
 		b = false
 	}
 
+	if true || true {
+		fmt.Println("double")
+	}
+
 	fmt.Println(b)
 }
