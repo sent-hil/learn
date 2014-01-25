@@ -6,7 +6,7 @@ import (
 )
 
 type My struct {
-	A int `abc:"type14"`
+	A int `abc:"imtag"`
 }
 
 func main() {
