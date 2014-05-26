@@ -10,5 +10,8 @@ func main() {
 	// goroutines are not guranteed to run synchrously
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
-	log.Println(10)
+	var _, file, line, ok = runtime.Caller(0)
+	if ok {
+		log.Println(file, line)
+	}
 }

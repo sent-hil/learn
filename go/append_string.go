@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	a := fmt.Sprintf("%v", time.Now())
+	var a = fmt.Sprintf("%v", time.Now())
 	fmt.Printf("%T, %v", a, a)
 }

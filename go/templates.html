@@ -1,0 +1,15 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      var data = [
+{{range .data}}
+          {{.}},
+{{end}}
+      ]
+
+      console.log(data);
+    </script>
+  </body>
+</html>
