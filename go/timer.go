@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"runtime/debug"
 
 	"time"
 )
@@ -13,6 +14,8 @@ func main() {
 		<-timer.C
 		panic("req too forever")
 	}()
+
+	debug.PrintStack()
 
 	time.Sleep(5 * time.Second)
 

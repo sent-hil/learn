@@ -3,19 +3,30 @@ package main
 import (
 	"log"
 	"reflect"
+	"runtime"
 )
 
-type Hello struct {
-	Name string
+func Hello() int {
+	log.Println("hello")
+	return 1
 }
 
 func main() {
-	hello := Hello{Name: "first"}
-	h := reflect.ValueOf(&hello).Elem()
+	var hola = func() func() int {
+		return Hello
+	}
 
-	log.Println(h.FieldByName("Name").String())
+	callMe(hola)
+}
 
-	h.FieldByName("Name").SetString("second")
+func callMe(fn interface{}) {
+	rfn := reflect.ValueOf(fn)
 
-	log.Println(h.FieldByName("Name").String())
+	log.Println(rfn.Pointer())
+	log.Println(runtime.FuncForPC(rfn.Pointer()).Name())
+
+	// result := make([]byte, 300)
+	// runtime.Stack(result, true)
+
+	// log.Println(string(result))
 }

@@ -1,7 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"os"
+	"os/signal"
+	"runtime/pprof"
 )
 
 func fib(num int) (result int) {
@@ -11,12 +13,24 @@ func fib(num int) (result int) {
 		result = 1
 	}
 
-	//returns name of variable in func def, i.e. result
 	return
 }
 
 func main() {
-	for i := 1; i < 20; i++ {
-		fmt.Println("Fib:", fib(i))
+	f, _ := os.Create("fib.prof")
+	pprof.StartCPUProfile(f)
+	defer pprof.StopCPUProfile()
+
+	c := make(chan os.Signal, 1)
+	signal.Notify(c, os.Interrupt)
+	go func() {
+		for _ = range c {
+			pprof.StopCPUProfile()
+			os.Exit(0)
+		}
+	}()
+
+	for i := 1; i < 40; i++ {
+		fib(i)
 	}
 }

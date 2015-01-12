@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"os"
+	"runtime/pprof"
 )
 
 type LinkedList struct {
@@ -10,6 +12,10 @@ type LinkedList struct {
 }
 
 func main() {
+	f, _ := os.Create("ll.prof")
+	pprof.StartCPUProfile(f)
+	defer pprof.StopCPUProfile()
+
 	list1 := LinkedList{value: 0}
 	list2 := LinkedList{value: 1, next: &list1}
 	list3 := LinkedList{value: 2, next: &list2}

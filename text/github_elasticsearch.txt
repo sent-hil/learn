@@ -1,0 +1,7 @@
+Github - consumer search
+
+Audit logs - anytime user does security related action
+
+Histogram to check for exceptions
+
+"segregate production clusters from things that are either just research or supporting internal tools"

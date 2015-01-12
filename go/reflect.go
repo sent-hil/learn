@@ -6,8 +6,9 @@ import (
 )
 
 func main() {
-	var x float64 = 5
+	var x interface{} = 5
 	v := reflect.ValueOf(x)
-	fmt.Println("val:", x)
-	fmt.Println("float?:", v.Kind() == reflect.Float64)
+
+	fmt.Println("val:", v, x)
+	fmt.Printf("%T", x)
 }
